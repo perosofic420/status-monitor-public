@@ -1,0 +1,23 @@
+{
+  "name": "Status Monitor",
+  "icons": [
+    {
+      "src": "/assets/images/af5aaac13afb2cde-logo-small-white.png",
+      "sizes": "any",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#eb5b1e",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

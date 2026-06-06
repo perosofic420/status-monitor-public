@@ -1,0 +1,15 @@
+.pagination {
+    --bs-pagination-color: #fff;
+    --bs-pagination-hover-color: #fff;
+    --bs-pagination-hover-bg: #c54711;
+    --bs-pagination-hover-border-color: #ad3e0f;
+    --bs-pagination-focus-color: #fff;
+    --bs-pagination-focus-bg: #ad3e0f;
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(239, 125, 77, 0.25);
+    --bs-pagination-active-color: #fff;
+    --bs-pagination-active-bg: #ad3e0f;
+    --bs-pagination-active-border-color: #96360d;
+    --bs-pagination-disabled-color: #fff;
+    --bs-pagination-disabled-bg: #eb5b1e;
+    --bs-pagination-disabled-border-color: #eb5b1e;
+}

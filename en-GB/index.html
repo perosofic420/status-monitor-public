@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Monitor - Home</title>
+
+    <link rel="stylesheet" href="/assets/deps/bootstrap-5.3.8/css/bootstrap.css">
+    <script src="/assets/deps/bootstrap-5.3.8/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/components/button.css">
+    <link rel="stylesheet" href="/assets/css/components/pagination.css">
+
+    <link rel="icon" href="/assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <script src="/assets/deps/moment.js-2.30.1/moment.js"></script>
+
+    <script src="/assets/js/dark-mode.js"></script>
+</head>
+<body>
+
+
+<section class="d-flex justify-content-center align-items-start min-vh-100 py-5">
+    <div class="card shadow-lg rounded-4 p-4 mx-3 w-100" style="max-width:500px;">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Status Monitor</h2>
+        </div>
+
+        <div class="container" id="serversContainer">
+            <div class="card shadow-sm rounded-4 p-4 w-100">
+                <div class="row">
+                    <div class="col-10">
+                        <h4 class="placeholder-glow mb-2"><span class="placeholder col-6 rounded-3"></span></h4>
+                        <p class="placeholder-glow mb-2"><span class="placeholder col-8 rounded-3"></span></p>
+                        <p class="placeholder-glow mb-0"><span class="placeholder col-4 rounded-3"></span></p>
+                    </div>
+                    <div class="col-2 d-flex justify-content-center align-items-center placeholder-glow">
+                        <span class="placeholder rounded-circle" style="width:28px;height:28px;display:block;"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm rounded-4 p-4 w-100 mt-3">
+                <div class="row">
+                    <div class="col-10">
+                        <h4 class="placeholder-glow mb-2"><span class="placeholder col-7 rounded-3"></span></h4>
+                        <p class="placeholder-glow mb-2"><span class="placeholder col-5 rounded-3"></span></p>
+                        <p class="placeholder-glow mb-0"><span class="placeholder col-4 rounded-3"></span></p>
+                    </div>
+                    <div class="col-2 d-flex justify-content-center align-items-center placeholder-glow">
+                        <span class="placeholder rounded-circle" style="width:28px;height:28px;display:block;"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm rounded-4 p-4 w-100 mt-3">
+                <div class="row">
+                    <div class="col-10">
+                        <h4 class="placeholder-glow mb-2"><span class="placeholder col-7 rounded-3"></span></h4>
+                        <p class="placeholder-glow mb-2"><span class="placeholder col-5 rounded-3"></span></p>
+                        <p class="placeholder-glow mb-0"><span class="placeholder col-4 rounded-3"></span></p>
+                    </div>
+                    <div class="col-2 d-flex justify-content-center align-items-center placeholder-glow">
+                        <span class="placeholder rounded-circle" style="width:28px;height:28px;display:block;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex justify-content-center align-items-center placeholder-glow mt-4" id="serversPagination">
+            <nav>
+                <ul class="pagination mb-0 gap-1">
+                    <li class="page-item">
+                        <a class="text-body d-flex align-items-center justify-content-center" style="width:38px;height:38px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="placeholder rounded-circle text-body" style="width:38px;height:38px;"></a></li>
+                    <li class="page-item"><a class="placeholder rounded-circle text-body" style="width:38px;height:38px;"></a></li>
+                    <li class="page-item"><a class="placeholder rounded-circle text-body" style="width:38px;height:38px;"></a></li>
+                    <li class="page-item">
+                        <a class="text-body d-flex align-items-center justify-content-center" style="width:38px;height:38px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+
+
+<script src="/assets/js/localization.js"></script>
+<script src="/assets/js/toast.js"></script>
+<script src="/assets/js/homepage.js"></script>
+
+<script src="/assets/js/onboarding/check.js"></script>
+
+</body>
+</html>

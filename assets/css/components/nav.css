@@ -1,0 +1,14 @@
+.nav {
+    --bs-nav-link-color: #fff;
+    --bs-nav-link-hover-color: #c54711;
+    --bs-nav-link-disabled-color: #672509;
+}
+
+.nav-link.active,
+.nav-item.show {
+    color: #eb5b1e;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: var(--bs-nav-link-hover-color);
+}
