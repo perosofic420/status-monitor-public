@@ -182,7 +182,8 @@ Resolved at: Never resolved`, { hostname: server.hostname });
                 rightCol.className = 'col-2 d-flex justify-content-center align-items-center';
 
                 const serverLink = document.createElement('a');
-                serverLink.href = `/servers/${server.uid}`;
+                const locale = "/en-US";
+                serverLink.href = `${locale}/servers/${server.uid}`;
                 serverLink.title = formText(`View {label}`, { label: server.label });
 
                 const serverLinkArrow = document.createElement('i');

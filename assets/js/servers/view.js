@@ -743,6 +743,6 @@ Resolved at: Never resolved`, { hostname: server.hostname });
 
 document.addEventListener('DOMContentLoaded', () => {
     const segments = new URL(window.location.href).pathname.split('/').filter(Boolean);
-    const serverId = segments[1];
+    const serverId = segments[1]; 
     getServerData(serverId);
 });
