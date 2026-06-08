@@ -613,7 +613,7 @@ Resolved at: Never resolved`, { hostname: server.hostname });
                 cpuUsageP.className = 'mb-0';
 
                 const cpuUsageI = document.createElement('i');
-                cpuUsageI.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu-icon lucide-cpu me-2"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg>';
+                cpuUsageI.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu-icon lucide-cpu me-2"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg>';
                 cpuUsageP.appendChild(cpuUsageI);
 
                 const cpuUsageSpan = document.createElement('span');
@@ -632,7 +632,7 @@ Resolved at: Never resolved`, { hostname: server.hostname });
                     memoryUsageP.className = 'mb-0';
 
                     const memoryUsageI = document.createElement('i');
-                    memoryUsageI.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick-icon lucide-memory-stick me-2"><path d="M12 12v-2"/><path d="M12 18v-2"/><path d="M16 12v-2"/><path d="M16 18v-2"/><path d="M2 11h1.5"/><path d="M20 18v-2"/><path d="M20.5 11H22"/><path d="M4 18v-2"/><path d="M8 12v-2"/><path d="M8 18v-2"/><rect x="2" y="6" width="20" height="10" rx="2"/></svg>';
+                    memoryUsageI.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick-icon lucide-memory-stick me-2"><path d="M12 12v-2"/><path d="M12 18v-2"/><path d="M16 12v-2"/><path d="M16 18v-2"/><path d="M2 11h1.5"/><path d="M20 18v-2"/><path d="M20.5 11H22"/><path d="M4 18v-2"/><path d="M8 12v-2"/><path d="M8 18v-2"/><rect x="2" y="6" width="20" height="10" rx="2"/></svg>';
                     memoryUsageP.appendChild(memoryUsageI);
 
                     const memoryUsageSpan = document.createElement('span');
@@ -648,7 +648,7 @@ Resolved at: Never resolved`, { hostname: server.hostname });
                     memoryUsageP.className = 'mb-0';
 
                     const memoryUsageI = document.createElement('i');
-                    memoryUsageI.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick-icon lucide-memory-stick me-2"><path d="M12 12v-2"/><path d="M12 18v-2"/><path d="M16 12v-2"/><path d="M16 18v-2"/><path d="M2 11h1.5"/><path d="M20 18v-2"/><path d="M20.5 11H22"/><path d="M4 18v-2"/><path d="M8 12v-2"/><path d="M8 18v-2"/><rect x="2" y="6" width="20" height="10" rx="2"/></svg>';
+                    memoryUsageI.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick-icon lucide-memory-stick me-2"><path d="M12 12v-2"/><path d="M12 18v-2"/><path d="M16 12v-2"/><path d="M16 18v-2"/><path d="M2 11h1.5"/><path d="M20 18v-2"/><path d="M20.5 11H22"/><path d="M4 18v-2"/><path d="M8 12v-2"/><path d="M8 18v-2"/><rect x="2" y="6" width="20" height="10" rx="2"/></svg>';
                     memoryUsageP.appendChild(memoryUsageI);
 
                     const memoryUsageSpan = document.createElement('span');
@@ -658,15 +658,66 @@ Resolved at: Never resolved`, { hostname: server.hostname });
                     liveInfoContainer.appendChild(memoryUsageP);
                 }
 
-                //todo: disk usage
-                console.log(server.live_monitoring.data);
+                if (server.live_monitoring.data.disk) {
+                    server.live_monitoring.data.disk.filter(disk => disk.main).forEach(disk => {
+                        const diskP = document.createElement('p');
+                        diskP.className = 'mb-0';
 
-                //todo: uptime
+                        const diskI = document.createElement('i');
+                        diskI.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive-icon lucide-hard-drive me-2"><path d="M10 16h.01"/><path d="M2.212 11.577a2 2 0 0 0-.212.896V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5.527a2 2 0 0 0-.212-.896L18.55 5.11A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><path d="M21.946 12.013H2.054"/><path d="M6 16h.01"/></svg>';
+                        diskP.appendChild(diskI);
 
-                //todo: last updated
-                
+                        const diskSpan = document.createElement('span');
+                        diskSpan.textContent = formText(`Disk ({mount}): {used}GB/{total}GB ({percent}% used)`, {
+                            mount: disk.mount,
+                            used: (disk.used_kb / 1024 / 1024).toFixed(2),
+                            total: (disk.total_kb / 1024 / 1024).toFixed(2),
+                            percent: disk.percent_used
+                        });
+                        diskP.appendChild(diskSpan);
+
+                        liveInfoContainer.appendChild(diskP);
+                    });
+                }
+
+                if (server.live_monitoring.data.uptime_seconds != null) {
+                    const days = Math.floor(server.live_monitoring.data.uptime_seconds / 86400);
+                    const hours = Math.floor((server.live_monitoring.data.uptime_seconds % 86400) / 3600);
+                    const mins = Math.floor((server.live_monitoring.data.uptime_seconds % 3600) / 60);
+
+                    const uptimeP = document.createElement('p');
+                    uptimeP.className = 'mb-0';
+
+                    const uptimeI = document.createElement('i');
+                    uptimeI.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-timer-icon lucide-timer me-2"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>';
+                    uptimeP.appendChild(uptimeI);
+
+                    const uptimeSpan = document.createElement('span');
+                    uptimeSpan.textContent = formText(`Uptime: {uptime}`, { uptime: `${days}d ${hours}h ${mins}m` });
+                    uptimeP.appendChild(uptimeSpan);
+
+                    liveInfoContainer.appendChild(uptimeP);
+                }
+
+                if (server.live_monitoring.data.last_updated_at) {
+                    const lastUpdatedP = document.createElement('p');
+                    lastUpdatedP.className = 'mb-0';
+
+                    const lastUpdatedI = document.createElement('i');
+                    lastUpdatedI.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-icon lucide-clock me-2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>';
+                    lastUpdatedP.appendChild(lastUpdatedI);
+
+                    const lastUpdatedSpan = document.createElement('span');
+                    lastUpdatedSpan.textContent = formText(`Last Updated: {date}`, { date: new Date(server.live_monitoring.data.last_updated_at).toLocaleString() });
+                    lastUpdatedP.appendChild(lastUpdatedSpan);
+
+                    liveInfoContainer.appendChild(lastUpdatedP);
+                }
             } else {
-                //todo: no data found
+                const noDataP = document.createElement('p');
+                noDataP.className = 'mb-0 text-muted';
+                noDataP.textContent = `Live monitoring is enabled but no data has been received yet.`;
+                liveInfoContainer.appendChild(noDataP);
             }
         } else {
             liveInfoContainer.classList.add('d-none');
